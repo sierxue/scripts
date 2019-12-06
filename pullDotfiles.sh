@@ -15,6 +15,10 @@ git pull --rebase
 git submodule update --remote --recursive
 # open the directory
 
+# Reinstall soft links.
+# 重新安装软链接
+./install
+
 # 打开 dotfiles-local 目录
 cd ~/.df/dotfiles-local
 
@@ -29,3 +33,7 @@ git pull --rebase
 # Update all the submodules recursively.
 # 更新所有相关的 submodules
 git submodule update --remote --recursive
+
+# Reinstall soft links.
+# 重新安装软链接
+./install
