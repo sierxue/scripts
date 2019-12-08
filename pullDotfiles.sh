@@ -10,9 +10,9 @@ git checkout .
 # 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
 git pull --rebase
 
-# Update all the submodules recursively.
-# 更新所有相关的 submodules
-git submodule update --remote --recursive
+# Update all the submodules.
+# 更新相关的 submodules
+git submodule update --remote
 # open the directory
 
 # Reinstall soft links.
@@ -30,9 +30,9 @@ git checkout .
 # 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
 git pull --rebase
 
-# Update all the submodules recursively.
-# 更新所有相关的 submodules
-git submodule update --remote --recursive
+# Update all the submodules.
+# 更新相关的 submodules
+git submodule update --remote
 
 # Reinstall soft links.
 # 重新安装软链接
