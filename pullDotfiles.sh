@@ -1,5 +1,5 @@
-# open the directory
-# 打开 dotfiles 目录
+# Go to the repository directory
+# 转到仓库所在的目录
 cd ~/.df/dotfiles
 
 # Discard all the unstaged changes made to the repository.
@@ -19,7 +19,8 @@ git submodule update --remote
 # 重新安装软链接
 ./install
 
-# 打开 dotfiles-local 目录
+# Go to the repository directory
+# 转到仓库所在的目录
 cd ~/.df/dotfiles-local
 
 # Discard all the unstaged changes made to the repository.
