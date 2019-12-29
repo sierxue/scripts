@@ -1,3 +1,7 @@
+# Clear contents in ~/.df/log/pullDotfiles.log
+# 清除 ~/.df/log/pullDotfiles.log 文件中的内容。
+truncate -s 0 ~/.df/log/pullDotfiles.log
+
 # Go to the repository directory
 # 转到仓库所在的目录
 cd ~/.df/scripts
