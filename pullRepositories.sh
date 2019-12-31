@@ -6,8 +6,11 @@ truncate -s 0 ~/.df/log/pullRepositories.log
 # 转到仓库所在的目录
 cd ~/repo/toolsRes
 
-# Discard all the unstaged changes made to the repository.
-# 丢弃掉所有未暂存的文件的修改。
+# Discard all untracked files and the unstaged changes made to the repository.
+# 丢弃掉所有未追踪及未暂存的文件的修改。
+git clean -df
+git clean -dff
+git checkout -- toolsRes.tex
 git checkout .
 
 # git pull new commits to the repository with rebase option.
