@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Clear contents in ~/.df/log/pullRepositories.log
 # 清除 ~/.df/log/pullRepositories.log 文件中的内容。
 truncate -s 0 ~/.df/log/pullRepositories.log
