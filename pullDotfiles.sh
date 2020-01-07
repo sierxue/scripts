@@ -31,7 +31,7 @@ git pull --rebase
 # Update all the submodules.
 # 更新相关的 submodules
 git submodule sync --recursive
-git submodule update --remote --recursive
+git submodule update --recurse-submodules
 # open the directory
 
 # Reinstall soft links.
@@ -53,7 +53,7 @@ git pull --rebase
 # Update all the submodules.
 # 更新相关的 submodules
 git submodule sync --recursive
-git submodule update --remote --recursive
+git submodule update --recurse-submodules
 
 # Reinstall soft links.
 # 重新安装软链接
