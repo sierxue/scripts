@@ -12,6 +12,7 @@ cd ~/repo/toolsRes
 # 丢弃掉所有未追踪及未暂存的文件的修改。
 git clean -df
 git clean -dff
+git checkout -- elegantbook_sierxue.cls
 git checkout -- toolsRes.tex
 git checkout .
 
