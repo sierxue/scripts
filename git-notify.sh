@@ -4,6 +4,7 @@
 function run {
 # how we want to extract the variables from the commit message.
 format_name="--format=%cn"
+format_date="--format=%at"
 format_when="--format=%cr"
 format_summary="--format=%s"
 format_body="--format=%b"
@@ -30,12 +31,17 @@ while [ 1 ]; do
 
         # extract the details from the log.
         commit_name=`git log -1 $format_name $latest_revision`
+        commit_date=`git log -1 $format_date $latest_revision`
         commit_when=`git log -1 $format_when $latest_revision`
         commit_summary=`git log -1 $format_summary $latest_revision`
         commit_body=`git log -1 $format_body $latest_revision`
 
         # notify the user of the commit.
         repo=$(basename $(pwd))
+        now=$(date +%s)
+        diff=$(( $now - $commit_date ))
+        # ganx: 259200 = 3 * 24 * 60 * 60, i.e., three days.
+        if [ "$diff" -lt 259200 ]; then
             # If repository="origin/master", then it does not display.)
             if [ "$repository="origin/master"" ]; then
                 # notify the user of the commit.
@@ -47,6 +53,7 @@ while [ 1 ]; do
                     $repository $commit_when!"
                 body="$commit_summary\n\n$commit_body"
             fi
+        fi
 	if [ "`uname`" == "Darwin" ]
 	then
 		command="osascript -e 'display notification \"$body\" with title \"$summary\"'"
