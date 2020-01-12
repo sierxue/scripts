@@ -12,15 +12,14 @@ cd ~/.df/dotfiles
 # 丢弃掉所有未暂存的文件的修改。
 git checkout .
 
-# git pull new commits to the repository with rebase option..
-# 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
-git pull --rebase
-
 # Update all the submodules.
 # 更新相关的 submodules
 git submodule sync --recursive
-git submodule update --recurse-submodules
-# open the directory
+git submodule update --remote --recursive
+
+# git pull new commits to the repository with rebase option..
+# 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
+git pull --rebase
 
 # Reinstall soft links.
 # 重新安装软链接
@@ -34,14 +33,14 @@ cd ~/.df/dotfiles-local
 # 丢弃掉所有未暂存的文件的修改。
 git checkout .
 
-# git pull new commits to the repository with rebase option..
-# 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
-git pull --rebase
-
 # Update all the submodules.
 # 更新相关的 submodules
 git submodule sync --recursive
-git submodule update --recurse-submodules
+git submodule update --remote --recursive
+
+# git pull new commits to the repository with rebase option..
+# 用带 rebase 选项的 git pull 更新这个仓库所有的新提交。
+git pull --rebase
 
 # Reinstall soft links.
 # 重新安装软链接
