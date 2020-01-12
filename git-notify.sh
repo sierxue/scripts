@@ -35,8 +35,18 @@ while [ 1 ]; do
         commit_body=`git log -1 $format_body $latest_revision`
 
         # notify the user of the commit.
-        summary="$commit_name committed to $repository $commit_when!"
-        body="$commit_summary\n\n$commit_body"
+        repo=$(basename $(pwd))
+            # If repository="origin/master", then it does not display.)
+            if [ "$repository="origin/master"" ]; then
+                # notify the user of the commit.
+                summary="$commit_name committed to $repo $commit_when!"
+                body="$commit_summary\n\n$commit_body"
+            else
+                # notify the user of the commit.
+                summary="$commit_name committed to $repo \
+                    $repository $commit_when!"
+                body="$commit_summary\n\n$commit_body"
+            fi
 	if [ "`uname`" == "Darwin" ]
 	then
 		command="osascript -e 'display notification \"$body\" with title \"$summary\"'"
