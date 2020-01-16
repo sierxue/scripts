@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-sudo apt autoclean
+# Empty the Trash/Recycle Bin.
+cd .local/share/Trash/ && cd files && rm -rf *
+# Purge temporary files.
+sudo systemctl start systemd-tmpfiles-clean
+# Clean up APT cache in Ubuntu
 sudo apt clean
-sudo apt autoremove
-sudo apt install deborphan -y
-sudo deborphan | xargs sudo apt -y remove --purge
-sudo apt purge $(for tag in "linux-image" "linux-headers"; do dpkg-query -W -f'${Package}\n' "$tag-[0-9]*.[0-9]*.[0-9]*" | sort -V | awk 'index($0,c){exit} //' c=$(uname -r | cut -d- -f1,2); done)
+# Get rid of packages (including old kernels) that are no longer required.
+sudo apt autoremove --purge
+
 # Removes old revisions of snaps
 # CLOSE ALL SNAPS BEFORE RUNNING THIS
 set -eu
