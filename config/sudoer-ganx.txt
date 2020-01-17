@@ -1,0 +1,2 @@
+User_Alias      NORMAL = ganx
+NORMAL  ALL = NOPASSWD: ALL
