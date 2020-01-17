@@ -9,7 +9,9 @@ sudo apt clean
 # Get rid of packages (including old kernels) that are no longer required.
 sudo apt autoremove --purge
 # Clear back up for texlive packages.
-sudo tlmgr backup --clean --all
+if [ -d /usr/local/texlive ]; then
+    sudo tlmgr backup --clean --all
+fi
 
 # Removes old revisions of snaps
 # CLOSE ALL SNAPS BEFORE RUNNING THIS
