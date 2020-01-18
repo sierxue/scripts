@@ -6,7 +6,7 @@ truncate -s 0 ~/.df/log/pullRepo.log
 
 # Go to the repository directory
 # 转到仓库所在的目录
-cd ~/repo/toolsRes
+cd ~/Documents/toolsRes
 
 # Discard all untracked files and the unstaged changes made to the repository.
 # 丢弃掉所有未追踪及未暂存的文件的修改。
