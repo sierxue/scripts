@@ -3,4 +3,4 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=""
 
 @hourly  ~/.df/dotfiles/scripts/pullDotfiles.sh >> ~/.df/log/pullDotfiles.log
-@hourly  ~/.df/dotfiles/scripts/pullRepo.sh >> ~/.df/log/pullRepo.log
+*/5 *  *  *  *  ~/.df/dotfiles/scripts/pullRepo.sh >> ~/.df/log/pullRepo.log
