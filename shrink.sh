@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Empty the Trash/Recycle Bin.
-cd .local/share/Trash/ && cd files && rm -rf *
+cd $HOME/.local/share/Trash/ && cd files && rm -rf *
 # Purge temporary files.
 sudo systemctl start systemd-tmpfiles-clean
 # Clean up APT cache in Ubuntu
