@@ -50,3 +50,6 @@ backup_update()
     git pull --rebase
 }
 
+backup_update toolsRes
+backup_update beamer-theme-collection
+backup_update manuscript-template-collection
