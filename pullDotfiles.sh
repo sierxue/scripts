@@ -4,6 +4,10 @@
 # 清除 ~/.df/log/pullDotfiles.log 文件中的内容。
 truncate -s 0 ~/.df/log/pullDotfiles.log
 
+# Update cron job if there is an update.
+crontab -u ganx ~/.df/dotfiles/scripts/config/crontab
+sudo /etc/init.d/cron restart
+
 # Go to the repository directory
 # 转到仓库所在的目录
 cd ~/.df/dotfiles
