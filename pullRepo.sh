@@ -22,7 +22,7 @@ backup_update()
     # $HOME/Documents/backup/$1-backup-$(date +%Y-%m-%d-%H:%M)
 
     # Backup the repo to the 1ast-$1.
-    if [ ! -d $HOME/Documents/backup/1ast-$1 ];
+    if [ -d $HOME/Documents/backup/1ast-$1 ];
     then
         rm -rf $HOME/Documents/backup/1ast-$1
     fi
