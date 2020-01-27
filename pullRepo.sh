@@ -26,7 +26,7 @@ backup_update()
     then
         rm -rf $HOME/Documents/backup/1ast-$1
     fi
-    cp -r $HOME/Documents/$1 $HOME/Documents/backup/1ast-$1
+    # cp -r $HOME/Documents/$1 $HOME/Documents/backup/1ast-$1
 
     # Go to the repository directory
     # 转到仓库所在的目录
