@@ -8,6 +8,9 @@ sudo systemctl start systemd-tmpfiles-clean
 sudo apt clean
 # Get rid of packages (including old kernels) that are no longer required.
 sudo apt autoremove --purge
+# Remove old kernels.
+sudo apt purge $(for tag in "linux-image" "linux-headers"; do dpkg-query -W -f'${Package}\n' "$tag-[0-9]*.[0-9]*.[0-9]*" | sort -V | awk 'index($0,c){exit} //' c=$(uname -r | cut -d- -f1,2); done)
+
 # Clear back up for texlive packages.
 if [ -d /usr/local/texlive ]; then
     sudo tlmgr backup --clean --all
