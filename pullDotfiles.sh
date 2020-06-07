@@ -2,7 +2,10 @@
 
 # Clear contents in ~/.df/log/pullDotfiles.log
 # 清除 ~/.df/log/pullDotfiles.log 文件中的内容。
-truncate -s 0 ~/.df/log/pullDotfiles.log
+if [ -d ~/.df/log/ ]; then
+    mkdir ~/.df/log
+else truncate -s 0 ~/.df/log/pullDotfiles.log
+fi
 
 # Update cron job if there is an update.
 crontab -u ganx ~/.df/dotfiles/scripts/config/crontab

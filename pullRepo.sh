@@ -2,7 +2,10 @@
 
 # Clear contents in $HOME/.df/log/pullRepo.log
 # 清除 $HOME/.df/log/pullRepo.log 文件中的内容。
-truncate -s 0 $HOME/.df/log/pullRepo.log
+if [ -d ~/.df/log/ ]; then
+    mkdir ~/.df/log
+else truncate -s 0 $HOME/.df/log/pullRepo.log
+fi
 
 # Define the function to backup and update a repo.
 backup_update()
