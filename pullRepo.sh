@@ -2,7 +2,7 @@
 
 # Clear contents in $HOME/.df/log/pullRepo.log
 # 清除 $HOME/.df/log/pullRepo.log 文件中的内容。
-if [ -d ~/.df/log/ ]; then
+if [ ! -d ~/.df/log/ ]; then
     mkdir ~/.df/log
 else truncate -s 0 $HOME/.df/log/pullRepo.log
 fi

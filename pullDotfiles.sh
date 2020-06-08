@@ -2,7 +2,7 @@
 
 # Clear contents in ~/.df/log/pullDotfiles.log
 # 清除 ~/.df/log/pullDotfiles.log 文件中的内容。
-if [ -d ~/.df/log/ ]; then
+if [ ! -d ~/.df/log/ ]; then
     mkdir ~/.df/log
 else truncate -s 0 ~/.df/log/pullDotfiles.log
 fi
