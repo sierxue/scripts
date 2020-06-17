@@ -46,3 +46,32 @@ update_repo_and_submodules
 # Reinstall soft links.
 # 重新安装软链接
 ./install
+
+# Update zsh-autosuggestions
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ];
+then
+    cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git pull    
+fi
+
+
+# Update zsh-completions
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions ];
+then
+    cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+    git pull
+fi
+
+# Update zsh-syntax-highlighting
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ];
+then
+    cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    git pull
+fi
+
+# Update theme spaceship-prompt
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt ];
+then
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt
+    git pull
+fi
