@@ -72,6 +72,6 @@ fi
 # Update theme spaceship-prompt
 if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt ];
 then
-    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt
+    cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt
     git pull
 fi
